@@ -48,8 +48,8 @@ def transform_load_data(task_instance):
     dt_string = now.strftime("%d%m%Y%H%M%S")
     dt_string = 'current_weather_data_parkcity_' + dt_string
     # df_data.to_csv(f"s3://pycode-birkbeck/{dt_string}.csv", index=False, storage_options=aws_credentials)
-    df_data.to_csv(f"s3://pycode-birkbeck/{dt_string}.csv", index=False)
-    # df_data.to_csv(f"/opt/airflow/dags/{dt_string}.csv", index=False)
+    # df_data.to_csv(f"s3://pycode-birkbeck/{dt_string}.csv", index=False)
+    df_data.to_csv(f"/opt/airflow/dags/{dt_string}.csv", index=False)
 
 
 default_args = {
